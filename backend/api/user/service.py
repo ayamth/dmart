@@ -46,7 +46,7 @@ otp_store = {}
 def set_otp(identifier: str, code: str):
     otp_store[identifier] = {
         "code": code,
-        "expires_at": time.time() + 1000  # 5 minutes TTL
+        "expires_at": time.time() + 1000  
     }
 
 async def mock_sending_otp_login(identifier: str) -> dict:
